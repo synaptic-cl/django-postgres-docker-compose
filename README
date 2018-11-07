@@ -1,0 +1,21 @@
+** setup
+
+build and up containers
+```
+docker-compose up
+```
+
+run migrations
+```
+docker-compose run web python3 manage.py migrate
+```
+
+create a user for admin
+```
+docker-compose run web python manage.py createsuperuser
+```
+
+** branch admin_example
+
+docker-compose run python3 manage.py startapp polls
+docker-compose run web python3 manage.py makemigrations main
