@@ -1,6 +1,6 @@
-## setup
+## Setup
 
-build and up containers:
+build and up containers
 
 ```
 docker-compose up
@@ -18,9 +18,9 @@ create a user for admin
 docker-compose run web python manage.py createsuperuser
 ```
 
-## branch admin_example
+## django-admin example
 
-The branch admin_example has a example app in djangoadmin.
+The branch admin_example has a example app in django-admin.
 
 You can learn how the app was made with the commits.
 
