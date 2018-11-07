@@ -20,7 +20,7 @@ docker-compose run web python manage.py createsuperuser
 
 ## django-admin example
 
-The branch admin_example has a example app in django-admin.
+The branch admin_example has an example app in django-admin.
 
 You can learn how the app was made with the commits.
 
