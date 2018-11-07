@@ -6,7 +6,6 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     ports:
       - '5432'
-    command: postgres -c config_file=/etc/postgresql/postgresql.conf
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
