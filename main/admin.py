@@ -16,7 +16,7 @@ admin.site.site_title = 'Tiendapp title'
 class ProductAdmin(admin.ModelAdmin):
     class Media:
         css = {
-            "all": ("my_styles.css"),
+          'all': ('my_styles.css',)
         }
         js = ("my_code.js",)
     list_display = ['sku', 'title', 'unit', 'unitCost', 'quantity', 'created_at', 'account_actions']
@@ -42,13 +42,5 @@ class ProductAdmin(admin.ModelAdmin):
         )
     account_actions.short_description = 'Account Actions'
     account_actions.allow_tags = True
-
-
-class CSSAdminMixin(object):
-    class Media:
-        css = {
-            'all': ('dashboard_solo.css'),
-        }
-
 
 admin.site.register(Product, ProductAdmin)
