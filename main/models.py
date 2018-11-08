@@ -17,8 +17,8 @@ class Product(models.Model):
     minQuantity = models.FloatField(help_text="Enter Product Min Quantity")
     family = models.ForeignKey('Family', on_delete=models.CASCADE)
     location = models.ForeignKey('Location', on_delete=models.CASCADE)
-    created_at = models.DateTimeField(default=datetime.datetime.now())
-    updated_at = models.DateTimeField(default=datetime.datetime.now())
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def get_absolute_url(self):
         """
@@ -46,6 +46,9 @@ class Family(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name_plural = "Families"
 
 
 class Location(models.Model):
